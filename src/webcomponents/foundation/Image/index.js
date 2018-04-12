@@ -12,4 +12,16 @@ export default class Image extends View {
     style.textContent = hostStyle
     this.shadowRoot.appendChild(style)
   }
+  connectedCallback() {
+    super.connectedCallback()
+  }
+  disconnectedCallback() {
+    super.disconnectedCallback()
+  }
+  attributeChangedCallback(...args) {
+    super.attributeChangedCallback(...args)
+  }
+  adoptedCallback(...args) {
+    super.adoptedCallback(...args)
+  }
 }

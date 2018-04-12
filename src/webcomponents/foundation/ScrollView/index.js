@@ -12,4 +12,16 @@ export default class ScrollView extends HTMLElement {
     this.shadowRoot.appendChild(style)
     this.shadowRoot.appendChild(document.createElement('slot'))
   }
+  connectedCallback() {
+    super.connectedCallback()
+  }
+  disconnectedCallback() {
+    super.disconnectedCallback()
+  }
+  attributeChangedCallback(...args) {
+    super.attributeChangedCallback(...args)
+  }
+  adoptedCallback(...args) {
+    super.adoptedCallback(...args)
+  }
 }

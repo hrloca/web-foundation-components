@@ -1,17 +1,9 @@
-view.addEventListener('swipeleft', () => {
-  console.log('swipeleft')
+view.addEventListener('swiperightreleased', () => {
+  console.log('swiperightreleased')
 })
 
-view.addEventListener('swiperight', () => {
-  console.log('swiperight')
-})
-
-button.addEventListener('swipeleft', () => {
-  console.log('swipeleft')
-})
-
-button.addEventListener('swiperight', () => {
-  console.log('swiperight')
+view.addEventListener('swipeleftreleased', () => {
+  console.log('swipeleftreleased')
 })
 
 button.addEventListener('press', () => {

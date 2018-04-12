@@ -3,12 +3,8 @@
  */
 
 import View from './../View'
-
-const hostStyle = `
-  :host {
-    display: inline-flex
-  }
-`
+import { hostStyle } from './style'
+import { EVENT_NAME } from './constants'
 
 export default class Button extends View {
   constructor() {
@@ -16,12 +12,20 @@ export default class Button extends View {
     const style = document.createElement('style')
     style.textContent = hostStyle
     this.shadowRoot.appendChild(style)
-    this.addEventListener('click', e => this.dispatchEvent(new Event('press', e)))
   }
 
   // lifecycle
   connectedCallback() {
     super.connectedCallback()
-    console.log('Button', 'connectedCallback')
+    this.addEventListener('click', e => this.dispatchEvent(new Event(EVENT_NAME.ON_PRESS, e)))
+  }
+  disconnectedCallback() {
+    super.disconnectedCallback()
+  }
+  attributeChangedCallback(...args) {
+    super.attributeChangedCallback(...args)
+  }
+  adoptedCallback(...args) {
+    super.adoptedCallback(...args)
   }
 }

@@ -27,7 +27,15 @@ export default class Presentation extends View {
     this.shadowRoot.appendChild(style)
   }
   connectedCallback() {
+    super.connectedCallback()
   }
-  attributeChangedCallback(attributeName, oldValue, newValue, namespace) {
+  disconnectedCallback() {
+    super.disconnectedCallback()
+  }
+  attributeChangedCallback(...args) {
+    super.attributeChangedCallback(...args)
+  }
+  adoptedCallback(...args) {
+    super.adoptedCallback(...args)
   }
 }

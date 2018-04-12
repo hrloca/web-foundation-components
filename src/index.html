@@ -36,6 +36,9 @@
         #button {
           background: #ffd;
           color: #999;
+          border: 1px solid #eee;
+          border-radius: 4px;
+          padding: 2px 4px;
         }
         .squareBox {
           justify-content: center;
@@ -48,7 +51,7 @@
 
       <ui-view shouldListenGesture id="view" class="squareBox">view</ui-view>
 
-      <ui-button id="button" class="squareBox">button</ui-button>
+      <ui-button id="button">button</ui-button>
 
       <script src="/app.js"></script>
     </body>
