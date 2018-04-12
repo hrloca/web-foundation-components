@@ -1,0 +1,102 @@
+/*
+ * config
+ * https://material.io/guidelines/
+ * */
+
+/* custom-media */
+@custom-media --viewport-mobile-s (min-width: 320px);
+@custom-media --viewport-mobile-m (min-width: 375px);
+@custom-media --viewport-mobile-l (min-width: 425px);
+@custom-media --viewport-tablet (min-width: 768px);
+@custom-media --viewport-laptop-m (min-width: 1024px);
+@custom-media --viewport-laptop-l (min-width: 1440px);
+
+:root {
+  /* grid */
+  --grid: 8px;
+
+  /* custom-media */
+  --breakpoint_mobile_s: 320px;
+  --breakpoint_mobile_m: 375px;
+  --breakpoint_mobile_l: 425px;
+  --breakpoint_tablet: 768px;
+  --breakpoint_laptop_m: 1024px;
+  --breakpoint_laptop_l: 1440px;
+
+  /* depth */
+  --depth-fixed: 1000;
+
+  /* Shape */
+  --paper-d1:
+    0 0 2px 0 rgba(0, 0, 0, .14),
+    0 2px 2px 0 rgba(0, 0, 0, .12),
+    0 1px 3px 0 rgba(0, 0, 0, .2);
+  --paper-d2:
+    0 2px 4px 0 rgba(0, 0, 0, .14),
+    0 3px 4px 0 rgba(0, 0, 0, .12),
+    0 1px 5px 0 rgba(0, 0, 0, .2);
+  --paper-d3:
+    0 3px 3px 0 rgba(0, 0, 0, .14),
+    0 3px 4px 0 rgba(0, 0, 0, .12),
+    0 1px 8px 0 rgba(0, 0, 0, .2);
+  --paper-d4:
+    0 2px 4px 0 rgba(0, 0, 0, .14),
+    0 4px 5px 0 rgba(0, 0, 0, .12),
+    0 1px 10px 0 rgba(0, 0, 0, .2);
+  --paper-d6:
+    0 6px 10px 0 rgba(0, 0, 0, .14),
+    0 1px 18px 0 rgba(0, 0, 0, .12),
+    0 3px 5px 0 rgba(0, 0, 0, .2);
+  --paper-d8:
+    0 8px 10px 1px rgba(0, 0, 0, .14),
+    0 3px 14px 3px rgba(0, 0, 0, .12),
+    0 4px 5px 0 rgba(0, 0, 0, .2);
+  --paper-d9:
+    0 9px 12px 1px rgba(0, 0, 0, .14),
+    0 3px 16px 2px rgba(0, 0, 0, .12),
+    0 5px 6px 0 rgba(0, 0, 0, .2);
+  --paper-d12:
+    0 12px 17px 2px rgba(0, 0, 0, .14),
+    0 5px 22px 4px rgba(0, 0, 0, .12),
+    0 7px 8px 0 rgba(0, 0, 0, .2);
+  --paper-d16:
+    0 16px 24px 2px rgba(0, 0, 0, .14),
+    0 6px 30px 5px rgba(0, 0, 0, .12),
+    0 8px 10px 0 rgba(0, 0, 0, .2);
+  --paper-d24:
+    0 24px 38px 3px rgba(0, 0, 0, .14),
+    0 9px 46px 8px rgba(0, 0, 0, .12),
+    0 11px 15px 0 rgba(0, 0, 0, .2);
+  --edge-tinted: 1px solid color(#fff alpha(.2));
+  --edge-shaded: 1px solid color(#000 alpha(.2));
+
+  /* motion (https://material.io/guidelines/motion/duration-easing.html) */
+
+  /* Easing */
+  --bezier: .4, 0, .2, 1;
+  --bezier-deceleration: 0, 0, .2, 1;
+  --bezier-acceleration: .4, 0, 1, 1;
+  --bezier-sharp: .4, 0, .6, 1;
+  --curves: cubic-bezier(var(--bezier));
+  --curves-deceleration: cubic-bezier(var(--bezier-deceleration));
+  --curves-acceleration: cubic-bezier(var(--bezier-acceleration));
+  --curves-sharp: cubic-bezier(var(--bezier-sharp));
+
+  /* Duration */
+
+  /* base */
+  --duration-tablet-rate: 1.3;
+  --duration-laptop-rate: .5;
+  --duration: 300ms;
+  --duration-large: 375ms;
+  --duration-entering: 225ms;
+  --duration-leaving: 195ms;
+  --duration-tablet: calc(var(--duration) * var(--duration-tablet-rate));
+  --duration-large-tablet: calc(var(--duration-large) * var(--duration-tablet-rate));
+  --duration-entering-tablet: calc(var(--duration-entering) * var(--duration-tablet-rate));
+  --duration-leaving-tablet: calc(var(--duration-leaving) * var(--duration-tablet-rate));
+  --duration-laptop: calc(var(--duration) * var(--duration-laptop-rate));
+  --duration-large-laptop: calc(var(--duration-large) * var(--duration-laptop-rate));
+  --duration-entering-laptop: calc(var(--duration-entering) * var(--duration-laptop-rate));
+  --duration-leaving-laptop: calc(var(--duration-leaving) * var(--duration-laptop-rate));
+}

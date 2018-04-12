@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <head>
+      <title>App</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+      <meta name="theme-color" content="#FFFFFF">
+      <meta name="description" content="">
+      <meta name="og:description" content="">
+      <meta name="keywords" content="">
+      <meta name="og:title" content="">
+      <meta name="og:type" content="website">
+      <meta name="og:url" content="">
+      <meta name="og:image" content="">
+      <meta name="og:site_name" content="">
+      <meta name="fb:app_id" content="">
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="">
+      <meta name="apple-mobile-web-app-title" content="">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <link rel="manifest" href="/manifest.json">
+      <link rel="apple-touch-icon" sizes="120x120" href="">
+      <link rel="apple-touch-icon" sizes="152x152" href="">
+      <link rel="apple-touch-icon" sizes="180x180" href="">
+    </head>
+    <body>
+      <script src="/register.js"></script>
+      <style>
+        #view {
+          background: #fdd;
+          color: #999;
+        }
+        #button {
+          background: #ffd;
+          color: #999;
+        }
+        .squareBox {
+          justify-content: center;
+          align-content: center;
+          align-items: center;
+          height: 200px;
+          width: 200px;
+        }
+      </style>
+
+      <ui-view shouldListenGesture id="view" class="squareBox">view</ui-view>
+
+      <ui-button id="button" class="squareBox">button</ui-button>
+
+      <script src="/app.js"></script>
+    </body>
+</html>

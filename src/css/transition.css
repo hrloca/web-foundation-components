@@ -1,0 +1,127 @@
+@import "config";
+
+/*
+property
+duration
+timing-function
+delay
+
+--curves-standard
+--curves-deceleration
+--curves-acceleration
+--curves-sharp
+*/
+
+/* transition implementation */
+:root {
+  --transition-duration: {
+    transition-duration: var(--duration);
+
+    @media (--viewport-tablet) {
+      transition-duration: var(--duration-tablet);
+    }
+
+    @media (--viewport-laptop-m) {
+      transition-duration: var(--duration-laptop);
+    }
+  }
+
+  --transition-duration-entering: {
+    transition-duration: var(--duration-entering);
+
+    @media (--viewport-tablet) {
+      transition-duration: var(--duration-entering-tablet);
+    }
+
+    @media (--viewport-laptop-m) {
+      transition-duration: var(--duration-entering-laptop);
+    }
+  }
+
+  --transition-duration-leaving: {
+    transition-duration: var(--duration-leaving);
+
+    @media (--viewport-tablet) {
+      transition-duration: var(--duration-leaving-tablet);
+    }
+
+    @media (--viewport-laptop-m) {
+      transition-duration: var(--duration-leaving-laptop);
+    }
+  }
+
+  --transition-duration-large: {
+    transition-duration: var(--duration-large);
+
+    @media (--viewport-tablet) {
+      transition-duration: var(--duration-large-tablet);
+    }
+
+    @media (--viewport-laptop-m) {
+      transition-duration: var(--duration-large-laptop);
+    }
+  }
+
+  --transition-ease: {
+    transition-timing-function: var(--curves);
+  }
+
+  --transition-ease-deceleration: {
+    transition-timing-function: var(--curves-deceleration);
+  }
+
+  --transition-ease-acceleration: {
+    transition-timing-function: var(--curves-acceleration);
+  }
+
+  --transition-ease-sharp: {
+    transition-timing-function: var(--curves-sharp);
+  }
+}
+
+.default {
+  @apply --transition-duration;
+  @apply --transition-ease;
+}
+
+.entering {
+  @apply --transition-duration-entering;
+  @apply --transition-ease-deceleration;
+}
+
+.leaving {
+  @apply --transition-duration-leaving;
+  @apply --transition-ease-sharp;
+}
+
+.duration {
+  @apply --transition-duration;
+}
+
+.durationEntering {
+  @apply --transition-duration-entering;
+}
+
+.durationLeaving {
+  @apply --transition-duration-leaving;
+}
+
+.durationLarge {
+  @apply --transition-duration-large;
+}
+
+.ease {
+  @apply --transition-ease;
+}
+
+.easeDecel {
+  @apply --transition-ease-deceleration;
+}
+
+.easeAccel {
+  @apply --transition-ease-acceleration;
+}
+
+.easeSharp {
+  @apply --transition-ease-sharp;
+}
