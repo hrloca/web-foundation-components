@@ -32,7 +32,7 @@ export default class View extends HTMLElement {
   // lifecycle
   // ----------------------------------------
   connectedCallback() {
-    if (this.hasAttr('shouldListenGesture')) this.registerGesture()
+    if (this.hasAttr('shouldListenGesture')) this.registerGestureEvent()
     if (this.hasAttr('useTransitionSystem')) this.registerTransition()
   }
   disconnectedCallback() {
@@ -48,7 +48,7 @@ export default class View extends HTMLElement {
     return isExistAttr(this)(attrName)
   }
 
-  registerGesture() {
+  registerGestureEvent() {
     registerGestureWidth(this)(applyGestureTo(this)())
   }
 
